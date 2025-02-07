@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Section Box */
+.box {
+    position: relative;
+    background-color: #777;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.box p {
+    margin-top: 40px; /* To prevent overlap with title */
+}
+
+/* Section Title */
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f4a4a4;
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+/* Individual Section Colors */
+.chicken .title {
+    background-color: #f4a4a4;
+}
+
+.beef .title {
+    background-color: #d9534f;
+}
+
+.sushi .title {
+    background-color: #f0db4f;
+}
+
+/* Desktop View (≥992px) */
+@media (min-width: 992px) {
+    .box {
+        width: 30%;
+        float: left;
+    }
+}
+
+/* Tablet View (768px–991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .box {
+        width: 48%;
+        margin-bottom: 10px;
+    }
+
+    .box:last-child {
+        width: 100%;
+    }
+}
+
+/* Mobile View (≤767px) */
+@media (max-width: 767px) {
+    .box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
